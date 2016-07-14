@@ -51,13 +51,10 @@ Add at the same path with files downloaded from the repoosity, your id_rsa and i
 
 ```yum install ambari-server```
 
-### Setup Ambari Server
+### Setup Ambari Server and Start
 Run the setup command to configure your Ambari Server, Database, JDK, LDAP, and other options:
 
-```ambari-server setup```
-
-### Start Ambari Server
-
+```ambari-server setup -s```
 ```ambari-server start```
 
 ### Deploy Cluster using Ambari Web UI
