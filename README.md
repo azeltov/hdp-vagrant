@@ -58,6 +58,31 @@ Run the setup command to configure your Ambari Server, Database, JDK, LDAP, and 
 
 ```ambari-server start```
 
+### On the HOST computer 
+Generate the rsa file in the vagrant directory on HOST first:
+
+~/dev/hdp2_4_2-vagrant$ ssh-keygen
+
+Generating public/private rsa key pair.
+
+Enter file in which to save the key (/home/azeltov/.ssh/id_rsa): /home/azeltov/dev/hdp2_4_2-vagrant/id_rsa
+
+Than the id_rsa files will get copied to vms, install the HDP using root and point to the id_rsa file.
+
+Your identification has been saved in /home/azeltov/dev/hdp2_4_2-vagrant/id_rsa.
+Your public key has been saved in /home/azeltov/dev/hdp2_4_2-vagrant/id_rsa.pub
+
 ### Deploy Cluster using Ambari Web UI
 Open up a web browser and go to http://ambari1:8080.
-Log in with username admin and password admin and follow on-screen instructions, selecting hosts created and services of interest.
+Log in with username admin and password admin and follow on-screen instructions, selecting hosts created and services of interest
+
+Install the ambari agent using the private ssh key generated earlier: /home/azeltov/dev/hdp2_4_2-vagrant/id_rsa
+
+Use ssh user account : root
+
+ambari1.mycluster
+master1.mycluster
+slave1.mycluster
+slave2.mycluster
+
+
