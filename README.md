@@ -80,12 +80,9 @@ Install the ambari agent using the private ssh key generated earlier: /home/azel
 
 Use ssh user account : root
 
+```
 ambari1.mycluster
-
 master1.mycluster
-
 slave1.mycluster
-
-slave2.mycluster
-
+```
 
