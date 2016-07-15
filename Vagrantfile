@@ -96,7 +96,7 @@ SCRIPT
     a1.vm.hostname = "ambari1.mycluster"
     a1.vm.network :private_network, ip: "192.168.0.11"
     a1.vm.provider :virtualbox do |vb|
-      vb.memory = "3072"
+      vb.memory = "4096"
     end
 
     a1.vm.network "forwarded_port", guest: 8080, host: 8080
@@ -108,7 +108,7 @@ SCRIPT
     m1.vm.hostname = "master1.mycluster"
     m1.vm.network :private_network, ip: "192.168.0.12"
     m1.vm.provider :virtualbox do |vb|
-      vb.memory = "3072"
+      vb.memory = "4096"
     end
   end
 
